@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Webcam Filter App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="container">
+    <h1>Webcam Filter App</h1>
+
+    <video id="video" autoplay playsinline></video>
+
+    <div class="controls">
+      <label for="filter">Choose Filter:</label>
+      <select id="filter">
+        <option value="none">None</option>
+        <option value="grayscale(100%)">Grayscale</option>
+        <option value="sepia(100%)">Sepia</option>
+        <option value="invert(100%)">Invert</option>
+        <option value="blur(3px)">Blur</option>
+        <option value="brightness(150%)">Bright</option>
+        <option value="contrast(200%)">High Contrast</option>
+        <option value="saturate(200%)">Color Boost</option>
+        <option value="hue-rotate(90deg)">Color Shift</option>
+        <option value="hue-rotate(180deg)">Opposite Colors</option>
+        <option value="opacity(70%)">Faded Look</option>
+        <option value="drop-shadow(10px 10px 10px red)">Red Shadow</option>
+      </select>
+
+      <button id="capture">📸 Capture</button>
+    </div>
+
+    <canvas id="canvas" style="display: none;"></canvas>
+
+    <div id="output"></div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
